@@ -25,8 +25,8 @@ const Question = ({ onChecked }) => {
   if (Loading) return <h1>Loading</h1>;
   if (serverError) return <h1>{serverError || "unknown error"}</h1>;
   return (
-    <main className="flex flex-col">
-      <h1 className="subtext">{questions?.question}</h1>
+    <main className="flex flex-col mt-5">
+      <h1 className="subtext text-base">{questions?.question}</h1>
       <ul key={questions?.id}>
         {questions?.options.map((item, index) => {
           return (

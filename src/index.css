@@ -17,14 +17,10 @@
 
 .text {
   font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 1;
 }
 
 .title {
   font-weight: 600;
-  font-size: 4.5rem;
-  line-height: 1;
 }
 html {
   scroll-behavior: smooth;
@@ -52,8 +48,8 @@ ul li label {
   display: block;
   position: relative;
   font-weight: 300;
-  font-size: 1.35rem;
-  padding: 10px 10px 10px 80px;
+  font-size: 1rem;
+  padding: 13px 10px 10px 80px;
   margin: 10px auto;
   height: 30px;
   z-index: 9;

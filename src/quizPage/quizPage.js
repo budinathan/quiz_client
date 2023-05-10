@@ -7,6 +7,7 @@ import {
 } from "../redux/questionReducer";
 import { PushAnswer } from "../hooks/setResult";
 import { Navigate } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 const QuizPage = () => {
   const [check, setCheck] = useState(null);
@@ -43,12 +44,17 @@ const QuizPage = () => {
   }
   return (
     <main className="px-5 py-6 h-screen flex flex-col">
-      <h1 className="title text-center">Mambo Quiz</h1>
+      <section className="top-5 right-5 fixed">
+        <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
+      </section>
+      <h1 className="title text-center text-blue-200 text-5xl max-md:text-4xl max-sm:text-3xl">
+        Mambo Quiz
+      </h1>
       <Question onChecked={onChecked} />
-      <div className="items-center justify-center flex gap-24">
+      <div className="items-center justify-center flex gap-24 mt-5">
         {trace > 0 ? (
           <button
-            className="border-gray-100 border-[1px] px-10 py-1 text-base"
+            className="border-gray-100 border-[1px] text-sm p-1 w-20 bg-yellow-600 hover:scale-110 ease-in-out duration-200 rounded-sm"
             onClick={onPrevious}
           >
             Previous
@@ -58,7 +64,7 @@ const QuizPage = () => {
         )}
 
         <button
-          className="border-gray-100 border-[1px] px-10 py-1 text-base"
+          className="border-gray-100 border-[1px] p-1 text-sm w-20 hover:scale-110 ease-in-out duration-200 rounded-sm bg-yellow-600"
           onClick={onNext}
         >
           Next
