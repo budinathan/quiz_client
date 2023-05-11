@@ -8,6 +8,7 @@ import {
 import { PushAnswer } from "../hooks/setResult";
 import { Navigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import logoasdos from "../assets/logoasdos.jpeg";
 
 const QuizPage = () => {
   const [check, setCheck] = useState(null);
@@ -44,14 +45,19 @@ const QuizPage = () => {
   }
   return (
     <main className="px-5 py-6 h-screen overflow-auto flex flex-col">
-      <section className="top-5 right-5 absolute">
+      <section className="top-5 right-5 absolute flex gap-3">
         <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
+        <img
+          src={logoasdos}
+          className="w-10 max-md:w-8 max-sm:w-6"
+          alt="logo"
+        />
       </section>
       <h1 className="title text-center text-blue-200 text-5xl max-md:text-4xl max-sm:text-3xl">
         Mambo Quiz
       </h1>
       <Question onChecked={onChecked} />
-      <div className="items-center justify-center flex gap-24 mt-5">
+      <div className="items-center justify-center flex gap-24 mt-10">
         {trace > 0 ? (
           <button
             className="text-gray-800 text-sm p-1 w-20 bg-yellow-600 hover:scale-110 ease-in-out duration-200 rounded-sm"

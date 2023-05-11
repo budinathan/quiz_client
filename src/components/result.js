@@ -27,8 +27,8 @@ const Result = () => {
           <span className="hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center">
             Informasi lebih
           </span>
-          <Link className="animate-pulse  hover:scale-110 bg-yellow-600 rounded-md text-gray-800 text-center">
-            Beli sekarang!
+          <Link className="animate-pulse  hover:scale-110 bg-green-300 rounded-md text-gray-800 text-center">
+            Beli Buku MamBo
           </Link>
           <Link
             to="/"

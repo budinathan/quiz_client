@@ -6,6 +6,7 @@ import { resetResultAction } from "../redux/resultReducer";
 import { attempsNumber, earnPointsInt } from "../helper/helper";
 import { usePublishresult } from "../hooks/setResult";
 import logo from "../assets/logo.png";
+import logoasdos from "../assets/logoasdos.jpeg";
 
 const ResultPage = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const ResultPage = () => {
   } = useSelector((state) => state);
 
   const attempts = attempsNumber(result);
-  const earnPoints = earnPointsInt(result, answers, 10);
+  const earnPoints = earnPointsInt(result, answers, 20);
 
   //store user result
   usePublishresult({ result, username: userId, attempts, points: earnPoints });
@@ -27,8 +28,13 @@ const ResultPage = () => {
   }
   return (
     <main className="px-5 py-6 h-screen overflow-auto flex flex-col items-center">
-      <section className="top-5 right-5 absolute">
+      <section className="top-5 right-5 absolute flex gap-3">
         <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
+        <img
+          src={logoasdos}
+          className="w-10 max-md:w-8 max-sm:w-6"
+          alt="logo"
+        />
       </section>
       <h1 className="title text-center text-blue-200 text-5xl max-md:text-4xl max-sm:text-3xl">
         Quiz Result

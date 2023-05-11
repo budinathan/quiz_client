@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setUserId } from "../redux/resultReducer";
 import logo from "../assets/logo.png";
+import logoasdos from "../assets/logoasdos.jpeg";
 
 const LandingPage = () => {
   const inputRef = useRef();
@@ -15,8 +16,13 @@ const LandingPage = () => {
   }
   return (
     <main className="px-5 py-6 h-screen flex flex-col items-center justify-center relative">
-      <section className="top-5 right-5 absolute  ">
+      <section className="top-5 right-5 absolute flex gap-3">
         <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
+        <img
+          src={logoasdos}
+          className="w-10 max-md:w-8 max-sm:w-6"
+          alt="logo"
+        />
       </section>
       <h1 className="title text-center text-blue-200 text-5xl max-md:text-4xl max-sm:text-3xl">
         Mathematics Book Quiz
