@@ -15,7 +15,7 @@ const LandingPage = () => {
   }
   return (
     <main className="px-5 py-6 h-screen flex flex-col items-center justify-center relative">
-      <section className="top-5 right-5 fixed">
+      <section className="top-5 right-5 absolute  ">
         <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
       </section>
       <h1 className="title text-center text-blue-200 text-5xl max-md:text-4xl max-sm:text-3xl">
@@ -27,12 +27,12 @@ const LandingPage = () => {
           ref={inputRef}
           placeholder="Username.."
           type="text"
-          className="text-xl max-md:text-lg max-sm:text-base border-gray-100 border-[1px] px-2 max-md:px-1 py-1 ring-1 rounded-sm bg-transparent text-blue-200"
+          className="text-xl max-md:text-lg max-md:placeholder:text-sm max-sm:text-base border-gray-100 border-[1px] px-2 max-md:px-1 py-1 ring-1 rounded-sm bg-transparent text-blue-200"
         />
       </form>
       <div className="mt-5 hover:scale-110 ease-in-out duration-200 rounded-sm ">
         <Link
-          className="border-gray-100 border-[1px] px-10 py-1   bg-yellow-600 "
+          className="rounded-sm px-10 py-1 text-gray-800  bg-yellow-600 "
           to="/quiz"
           onClick={startQuiz}
         >

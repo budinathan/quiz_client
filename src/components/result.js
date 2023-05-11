@@ -15,6 +15,30 @@ const Result = () => {
   return (
     <main className="mt-5 flex gap-8 max-sm:flex-col mb-5">
       <section>
+        <h1 className="text mb-1 text-center">Informasi</h1>
+        <div className="flex flex-col px-3  py-1 max-md:text-sm  gap-2 max-md:text-center ">
+          <a
+            href="/"
+            download
+            className="hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center"
+          >
+            Download Solusi
+          </a>
+          <span className="hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center">
+            Informasi lebih
+          </span>
+          <Link className="animate-pulse  hover:scale-110 bg-yellow-600 rounded-md text-gray-800 text-center">
+            Beli sekarang!
+          </Link>
+          <Link
+            to="/"
+            className=" animate-pulse  hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center"
+          >
+            Chat dengan admin
+          </Link>
+        </div>
+      </section>
+      <section>
         <h1 className="text mb-1 text-center">Leaderboard</h1>
         <table className="w-full">
           <thead className="text-base text-center  bg-gray-700">
@@ -28,37 +52,13 @@ const Result = () => {
               return (
                 <tr key={index}>
                   <td>{item?.username || ""}</td>
-                  <td>{item?.points || 0} </td>
+                  <td>{item?.points} </td>
                 </tr>
               );
             })}
             {!data ?? <div>No Data</div>}
           </tbody>
         </table>
-      </section>
-      <section>
-        <h1 className="text mb-1 text-center">Informasi</h1>
-        <div className="flex flex-col  border-gray-100 border-[1px] border-opacity-50 px-3  py-1 max-md:text-sm  gap-2 max-md:text-center ">
-          <a
-            href="/"
-            download
-            className="hover:scale-110 ease-in-out duration-200"
-          >
-            Download Solusi
-          </a>
-          <span className="hover:scale-110 ease-in-out duration-200">
-            Informasi lebih
-          </span>
-          <Link className="text-start animate-pulse max-md:text-center text-green-300 hover:scale-110 ease-in-out duration-200">
-            Beli sekarang!
-          </Link>
-          <Link
-            to="/"
-            className="text-start animate-pulse max-md:text-center text-green-300 hover:scale-110 ease-in-out duration-200"
-          >
-            Chat dengan admin
-          </Link>
-        </div>
       </section>
     </main>
   );

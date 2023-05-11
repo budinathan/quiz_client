@@ -43,8 +43,8 @@ const QuizPage = () => {
     return <Navigate to="/result" replace="true"></Navigate>;
   }
   return (
-    <main className="px-5 py-6 h-screen flex flex-col">
-      <section className="top-5 right-5 fixed">
+    <main className="px-5 py-6 h-screen overflow-auto flex flex-col">
+      <section className="top-5 right-5 absolute">
         <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
       </section>
       <h1 className="title text-center text-blue-200 text-5xl max-md:text-4xl max-sm:text-3xl">
@@ -54,7 +54,7 @@ const QuizPage = () => {
       <div className="items-center justify-center flex gap-24 mt-5">
         {trace > 0 ? (
           <button
-            className="border-gray-100 border-[1px] text-sm p-1 w-20 bg-yellow-600 hover:scale-110 ease-in-out duration-200 rounded-sm"
+            className="text-gray-800 text-sm p-1 w-20 bg-yellow-600 hover:scale-110 ease-in-out duration-200 rounded-sm"
             onClick={onPrevious}
           >
             Previous
@@ -64,7 +64,7 @@ const QuizPage = () => {
         )}
 
         <button
-          className="border-gray-100 border-[1px] p-1 text-sm w-20 hover:scale-110 ease-in-out duration-200 rounded-sm bg-yellow-600"
+          className=" text-gray-800 p-1 text-sm w-20 hover:scale-110 ease-in-out duration-200 rounded-sm bg-yellow-600"
           onClick={onNext}
         >
           Next
