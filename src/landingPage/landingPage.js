@@ -16,7 +16,7 @@ const LandingPage = () => {
   }
   return (
     <main className="px-5 py-6 h-screen flex flex-col items-center justify-center relative">
-      <section className="top-5 right-5 absolute flex gap-3">
+      <section className="top-5 right-3 absolute flex gap-3">
         <img src={logo} className="w-10 max-md:w-8 max-sm:w-6" alt="logo" />
         <img
           src={logoasdos}
