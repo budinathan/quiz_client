@@ -49,9 +49,6 @@ const ResultPage = () => {
           <span className="max-md:text-sm">{earnPoints || 0}</span>
         </div>
       </section>
-      <section>
-        <Result />
-      </section>
       <section className="mt-5 hover:scale-110 ease-in-out duration-200 rounded-sm">
         <Link
           className="rounded-sm  px-10 py-1   bg-yellow-600 text-gray-800"
@@ -60,6 +57,9 @@ const ResultPage = () => {
         >
           Restart
         </Link>
+      </section>
+      <section>
+        <Result />
       </section>
     </main>
   );

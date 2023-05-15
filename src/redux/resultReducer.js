@@ -9,7 +9,7 @@ export const ResultReducer = createSlice({
   reducers: {
     setUserId: (state, action) => {
       state.userId = action.payload;
-    },
+    }, 
     pushResultAction: (state, action) => {
       state.result.push(action.payload);
     },
