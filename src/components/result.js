@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getServerData } from "../helper/helper";
 import { Link } from "react-router-dom";
+import solusi from "../assets/Ebook Mambo.pdf";
+import poster from "../assets/poster.pdf";
 
 const Result = () => {
   const [data, setData] = useState([]);
@@ -18,24 +20,33 @@ const Result = () => {
         <h1 className="text mb-1 text-center">Informasi</h1>
         <div className="flex flex-col px-3  py-1 max-md:text-sm  gap-2 max-md:text-center ">
           <a
-            href="/"
+            href={solusi}
             download
             className="hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center"
           >
             Download Solusi
           </a>
-          <span className="hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center">
+          <a
+            className="hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center"
+            href={poster}
+            download
+          >
             Informasi lebih
-          </span>
-          <Link className="animate-pulse  hover:scale-110 bg-green-300 rounded-md text-gray-800 text-center">
+          </a>
+          <Link
+            className="animate-pulse  hover:scale-110 bg-green-300 rounded-md text-gray-800 text-center"
+            to="https://docs.google.com/forms/d/e/1FAIpQLSfnmPrGilKZrMDdQtxEx5XH_w8vYublrIafiPieZfOBc3-0Wg/viewform"
+          >
             Beli Buku MamBo
           </Link>
-          <Link
-            to="/"
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://wa.me/+6287728062003"
             className=" animate-pulse  hover:scale-110 ease-in-out duration-200 bg-yellow-600 rounded-md text-gray-800 text-center"
           >
             Chat dengan admin
-          </Link>
+          </a>
         </div>
       </section>
       <section>
