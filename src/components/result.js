@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getServerData } from "../helper/helper";
 import { Link } from "react-router-dom";
 import solusi from "../assets/Ebook Mambo.pdf";
-import poster from "../assets/poster.pdf";
+import poster from "../assets/poster.jpeg";
 
 const Result = () => {
   const [data, setData] = useState([]);
